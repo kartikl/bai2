@@ -106,6 +106,8 @@ TypeCodes = [
     TypeCode('086', None, TypeCodeLevel.status, 'Transfer Calculation'),
     TypeCode('100', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'Total Credits'),
     TypeCode('101', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'Total Credit Amount MTD'),
+    TypeCode('102', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'REVERSAL OF CREDIT TRANSACTION ON'),
+
     TypeCode('105', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'Credits Not Detailed'),
     TypeCode('106', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'Deposits Subject to Float'),
     TypeCode('107', TypeCodeTransaction.credit, TypeCodeLevel.summary, 'Total Adjustment Credits YTD'),
@@ -313,6 +315,8 @@ TypeCodes = [
     TypeCode('399', TypeCodeTransaction.credit, TypeCodeLevel.detail, 'Miscellaneous Credit'),
     TypeCode('400', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Total Debits'),
     TypeCode('401', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Total Debit Amount MTD'),
+    TypeCode('402', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Number of Debits'),
+
     TypeCode('403', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Today’s Total Debits'),
     TypeCode('405', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Total Debit Less Wire Transfers and '
                                                                       'ChargeBacks'),
@@ -527,6 +531,12 @@ TypeCodes = [
     TypeCode('728', TypeCodeTransaction.credit, TypeCodeLevel.detail, 'Amount Applied to Service Charge'),
     TypeCode('760', TypeCodeTransaction.debit, TypeCodeLevel.summary, 'Loan Disbursement'),
     TypeCode('890', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'Contains Non-monetary Information'),
+    TypeCode('920', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'Total Credit 0 Day Float'),
+    TypeCode('947', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'Loan Fee Credit'),
+    TypeCode('962', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'Deposit-LinkACHReturn'),
+    TypeCode('968', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'Account Analysis Charge Debit'),
+    TypeCode('976', TypeCodeTransaction.misc, TypeCodeLevel.detail, 'SEPA Core DD Payment'),
+
 ]
 TypeCodes = {
     type_code.code: type_code

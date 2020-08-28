@@ -140,6 +140,13 @@ class BaseSingleParser(BaseParser):
             field_config = (field_config, lambda x: x)
 
         field_name, parser = field_config
+        # trimmed_value = raw_value.rstrip()
+        # if len(trimmed_value) > 1 and trimmed_value[-1] == '/':
+        #     trimmed_value = trimmed_value.rstrip('/')
+        # else:
+        #     trimmed_value = raw_value
+        # field_value = parser(trimmed_value) if raw_value else None
+
         field_value = parser(raw_value) if raw_value else None
         return field_name, field_value
 
